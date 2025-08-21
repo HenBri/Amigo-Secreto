@@ -26,3 +26,14 @@ function mostrarAmigos(){
         lista.appendChild(li);
     });
 }
+function sortearAmigo(){
+    if(nombresAmigos.length >1){
+        let indiceAmigo =   Math.floor(Math.random()*nombresAmigos.length);
+
+        let amigoSecreto = document.getElementById("resultado");
+        amigoSecreto.innerHTML= nombresAmigos[indiceAmigo];
+
+    }else{
+        alert("Agregue mas amigos");
+    }
+}
