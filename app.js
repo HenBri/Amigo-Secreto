@@ -11,7 +11,18 @@ function agregarAmigo(){
     }else{
         nombresAmigos.push(nuevoAmigo);
         console.log(nombresAmigos);
+        mostrarAmigos();
         
     }
 
+}
+
+function mostrarAmigos(){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    nombresAmigos.forEach(amigo => {
+        let li = document.createElement("li");
+        li.textContent=amigo;
+        lista.appendChild(li);
+    });
 }
